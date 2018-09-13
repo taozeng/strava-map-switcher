@@ -21,7 +21,12 @@ L.Google = L.Class.extend({
 		continuousWorld: false,
 		noWrap: false,
 		mapOptions: {
-			backgroundColor: '#dddddd'
+			backgroundColor: '#dddddd',
+			streetViewControl: true,
+			streetViewControlOptions: {
+				position: google.maps.ControlPosition.LEFT_BOTTOM
+			},
+
 		}
 	},
 
@@ -115,7 +120,6 @@ L.Google = L.Class.extend({
 			draggable: false,
 			disableDoubleClickZoom: true,
 			scrollwheel: false,
-			streetViewControl: false,
 			styles: this.options.mapOptions.styles,
 			backgroundColor: this.options.mapOptions.backgroundColor
 		});
